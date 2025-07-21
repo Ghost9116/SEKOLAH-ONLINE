@@ -1,20 +1,21 @@
 // db.js
+const mysql = require('mysql2');
 require('dotenv').config();
-const mysql = require('mysql');
 
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,     // contoh: 'localhost'
-  user: process.env.DB_USER,     // contoh: 'root'
-  password: process.env.DB_PASS, // contoh: ''
-  database: process.env.DB_NAME  // contoh: 'sekolah_online'
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  port: process.env.PORT
 });
 
-db.connect((err) => {
+connection.connect(err => {
   if (err) {
-    console.error('❌ Gagal koneksi ke database:', err);
+    console.error('❌ Gagal terhubung ke database:', err);
   } else {
-    console.log('✅ Terhubung ke database');
+    console.log('✅ Terhubung ke database!');
   }
 });
 
-module.exports = db;
+module.exports = connection;
