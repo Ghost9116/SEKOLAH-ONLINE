@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi Pembelajaran</title>
+  <link rel="stylesheet" href="materi.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>📘 Materi Pembelajaran</h1>
+    <div class="info">
+      <span id="info-paket-kelas">Paket - Kelas</span>
+      <button onclick="window.location.href='dashboard.html'">⬅️ Kembali</button>
+      <button onclick="window.location.href='login.html'">🔒 Logout</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <div id="materi-container" class="video-container">
+      <!-- Video akan dimuat via JS -->
+    </div>
+  </main>
+
+  <script>
+    fetch('/api/siswa')
+      .then(res => {
+        if (!res.ok) throw new Error('Session expired');
+        return res.json();
+      })
+      .then(data => {
+        document.getElementById('info-paket-kelas').textContent = `Paket ${data.paket} - Kelas ${data.kelas}`;
+      })
+      .catch(() => {
+        alert('Sesi login siswa telah habis. Silakan login ulang.');
+        window.location.href = 'login.html';
+      });
+  </script>
+  <script src="materi.js"></script>
+</body>
+</html>

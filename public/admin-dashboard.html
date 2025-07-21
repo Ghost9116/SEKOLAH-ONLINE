@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo Sekolah" class="logo">
+      <span class="nama-sekolah">SEKOLAH ONLINE</span>
+    </div>
+    <h1>Dashboard Admin</h1>
+    <button class="logout-button" onclick="location.href='login-admin.html'">Logout</button>
+  </header>
+
+  <main class="main-content">
+    <section class="welcome">
+      <h2 id="welcome">Selamat Datang</h2>
+      <div class="profile-box">
+        <p>👤 <span id="nama-admin">Nama Admin</span></p>
+        <p>🎒 Paket: <span id="paket-admin">-</span></p>
+        <p>🏫 Kelas: <span id="kelas-admin">-</span></p>
+      </div>
+    </section>
+
+    <section class="admin-actions">
+      <h3>📁 Panel Admin</h3>
+      <div class="action-buttons">
+        <button onclick="location.href='kelola-video.html'">🎥 Upload Video</button>
+        <button onclick="location.href='kelola-soal.html'">📝 Upload Soal</button>
+        <button onclick="location.href='data-siswa.html'">📋 Daftar Siswa</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

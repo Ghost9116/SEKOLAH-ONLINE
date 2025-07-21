@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kelola Video - Admin</title>
+  <link rel="stylesheet" href="kelola-video.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📺 Tambah Video Pembelajaran (YouTube)</h1>
+
+    <!-- Form Upload Video -->
+    <form id="uploadForm" action="/upload-video" method="POST">
+      <input type="text" name="judul" placeholder="Judul Video" required />
+      <textarea name="deskripsi" placeholder="Deskripsi Video" required></textarea>
+      <input type="text" name="link" placeholder="Link YouTube (contoh: https://www.youtube.com/watch?v=...)" required />
+      <input type="text" name="mapel" placeholder="Mata Pelajaran" required />
+
+      <div class="select-group">
+        <select name="paket" required>
+          <option value="">Pilih Paket</option>
+          <option value="B">Paket B</option>
+          <option value="C">Paket C</option>
+        </select>
+
+        <select name="kelas" required>
+          <option value="">Pilih Kelas</option>
+          <option value="7">Kelas 7</option>
+          <option value="8">Kelas 8</option>
+          <option value="9">Kelas 9</option>
+          <option value="10">Kelas 10</option>
+          <option value="11">Kelas 11</option>
+          <option value="12">Kelas 12</option>
+        </select>
+      </div>
+
+      <button type="submit">📤 Simpan Video</button>
+    </form>
+
+    <!-- Daftar Video -->
+    <h2>📂 Daftar Video Terupload</h2>
+    <div id="video-list" class="video-list">
+      <!-- Video akan dimuat via JavaScript -->
+    </div>
+
+    <button onclick="window.location.href='admin-dashboard.html'">⬅️ Kembali ke Dashboard</button>
+  </div>
+
+  <script src="kelola-video.js"></script>
+</body>
+</html>

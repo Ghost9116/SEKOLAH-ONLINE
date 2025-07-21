@@ -1,0 +1,130 @@
+/* kelola-soal.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f9ff;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #005f99;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.select-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.select-group select {
+  flex: 1;
+  min-width: 120px;
+}
+
+form button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+.tugas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tugas-box {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.tugas-box h3 {
+  margin: 0;
+  color: #333;
+}
+
+.tugas-box p {
+  margin: 6px 0;
+}
+
+.tugas-box a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.tugas-box button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tugas-box button:hover {
+  background-color: #c0392b;
+}
+
+button {
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .select-group {
+    flex-direction: column;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+
+  .tugas-box iframe {
+    width: 100%;
+  }
+}

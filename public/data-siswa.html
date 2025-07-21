@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Siswa</title>
+  <link rel="stylesheet" href="data-siswa.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👥 Data Siswa</h1>
+
+    <!-- Form Tambah Siswa -->
+    <form id="form-siswa" method="POST">
+      <input type="text" name="nama" placeholder="Nama Siswa" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <select name="paket" required>
+        <option value="">Pilih Paket</option>
+        <option value="B">Paket B</option>
+        <option value="C">Paket C</option>
+      </select>
+      <select name="kelas" required>
+        <option value="">Pilih Kelas</option>
+        <option value="7">Kelas 7</option>
+        <option value="8">Kelas 8</option>
+        <option value="9">Kelas 9</option>
+        <option value="10">Kelas 10</option>
+        <option value="11">Kelas 11</option>
+        <option value="12">Kelas 12</option>
+      </select>
+      <button type="submit">➕ Tambah Siswa</button>
+    </form>
+
+    <h2>📋 Daftar Siswa</h2>
+    <div id="siswa-list"></div>
+
+    <button onclick="window.location.href='admin-dashboard.html'">⬅️ Kembali ke Dashboard</button>
+  </div>
+
+  <script src="data-siswa.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Siswa</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo Sekolah" class="logo" />
+      <span class="nama-sekolah">SEKOLAH ONLINE</span>
+    </div>
+    <h1>Dashboard Siswa</h1>
+    <button class="logout-button" onclick="location.href='login.html'">Logout</button>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile-box">
+        <p>👤 <span id="nama-siswa">Nama Siswa</span></p>
+        <p>🎒 Paket: <span id="paket-siswa">-</span></p>
+        <p>🏫 Kelas: <span id="kelas-siswa">-</span></p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="materi.html" class="dashboard-link">📚 Materi Pembelajaran</a>
+          <li><a href="tugas.html">✅ Tugas</a></li>
+          <li><a href="ganti-password.html">⚙️ Pengaturan Akun</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="welcome">
+        <h2 id="welcome">Selamat Datang</h2>
+        <p>Gunakan menu di samping untuk memulai pembelajaran.</p>
+      </section>
+
+      <section class="quick-summary">
+        <div class="summary-box">Materi Diselesaikan: <strong>5</strong></div>
+        <div class="summary-box">Tugas Terakhir: <strong>IPA Bab 2</strong></div>
+        <div class="summary-box">Progress Belajar: <strong>50%</strong></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

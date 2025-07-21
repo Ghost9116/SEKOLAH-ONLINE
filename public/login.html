@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Siswa - SEKOLAH ONLINE</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">SEKOLAH ONLINE</h1>
+      <button onclick="window.location.href='index.html'">🏠 Home</button>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <h2>Login Siswa</h2>
+
+    <!-- Notifikasi error -->
+    <div id="error-message" class="hidden">Username atau Password salah!</div>
+
+    <form action="/login" method="POST">
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+</form>
+
+    </form>
+  </div>
+
+  <script>
+    // Cek jika URL punya query ?error=true → tampilkan notifikasi
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('error') === 'true') {
+      document.getElementById('error-message').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

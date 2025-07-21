@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+}
+
+.main-header {
+  background-color: #005f99;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nama-sekolah {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logout-button {
+  padding: 8px 14px;
+  background-color: white;
+  color: #005f99;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 60px); /* total tinggi viewport dikurangi header */
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #d0e7ff;
+  color: black;
+  padding: 80px 10px 20px;
+}
+
+.profile-box {
+  margin-bottom: 20px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar-nav ul li a {
+  text-decoration: none;
+  color: #003f5e;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.quick-summary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.summary-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  min-width: 150px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .quick-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logout-button {
+    align-self: flex-end;
+  }
+}

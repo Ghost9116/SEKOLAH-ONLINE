@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Tugas Siswa</title>
+  <link rel="stylesheet" href="tugas.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>📘 Tugas Siswa</h1>
+    <div class="info-bar">
+      <span id="info-paket-kelas">Paket - Kelas</span>
+      <div class="button-group">
+        <button onclick="window.location.href='dashboard.html'">⬅️ Kembali</button>
+        <button onclick="window.location.href='login.html'">🔒 Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div id="tugas-container" class="tugas-list">
+      <!-- Tugas akan dimuat oleh tugas.js -->
+    </div>
+  </main>
+
+  <script src="tugas.js"></script>
+</body>
+</html>
