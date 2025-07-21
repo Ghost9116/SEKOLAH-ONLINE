@@ -7,7 +7,7 @@ const session = require('express-session');
 const db = require('./db');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT.APP_PORT || 3000;
 
 // Middleware
 app.use(express.static(path.join(__dirname, '../public')));
